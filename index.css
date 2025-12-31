@@ -1,0 +1,219 @@
+* {
+    box-sizing : border-box;
+}
+
+body {
+    margin : 0;
+}
+
+header {
+    width : 100%;
+    height : 40px;
+    padding-left : 10px;
+    padding-right : 10px;
+
+    /* 80을 붙여서 투명도 조절. 8진수 기준 약 50%. */
+    background-color : #f4f2f080;
+    display : flex;
+    align-items: center;
+
+    /* 뷰포트 좌상단에 고정한다. */
+    position : fixed;
+    top : 0;
+    left : 0;
+}
+
+img {
+    width : 100%;
+    height : 45%;
+    
+    /* 해당 위치의 요소를 가득 채운다. */
+    object-fit: cover;
+}
+
+.header-left {
+    flex : 4;
+}
+
+.header-right {
+    height : 100%;
+
+    flex : 1;
+    display : flex;
+    text-align : right;
+    align-items : center;
+}
+
+.header-right p {
+    margin-left : 1rem;
+}
+
+.main {
+    width : 100%;
+    padding-left : 10%;
+    padding-right : 10%;
+    height : 100vh;
+
+    display : flex;
+    justify-content : center;
+    align-items : center;
+}
+
+.main-profile {
+    font-size : 2rem;
+}
+
+.main-content {
+    width : 100%;
+}
+
+.main-header {
+    width : 100%;
+    border-bottom : 1px solid #f0edea;
+    margin-bottom : 1em;
+    text-align : center;
+}
+
+
+
+.cards {
+    width : 100%;
+    height : calc(100vh * (3/5) + 1rem);
+    display : flex;
+}
+
+.card-layout {
+    width : 25%;
+    margin : 2%;
+    height : calc(100vh * (3/5));
+    border-radius: 3%;
+    border : 1px solid #f0edea;
+
+    overflow : hidden;
+}
+
+
+
+.card-under {
+    width : 100%;
+    padding : 4%;
+}
+
+.card-content {
+    height : 30%;
+}
+
+.card-content h4, .card-content p {
+    margin-top : 0;
+    margin-bottom : 0.5rem;
+}
+
+.card-content p {
+    display : -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
+
+.card-tags {
+    height : 17%;
+}
+
+.card-tag {
+    border-radius : 2px;
+    border : 1px solid lightgray;
+    background-color : #f3f3f3;
+    padding : 2px;
+    margin : 2px;
+    margin-right : 5px;
+    margin-left : 0;
+    font-size : 0.7rem;
+}
+
+.blue {
+    border : 1px solid lightblue;
+}
+
+.green {
+    border : 1px solid lightgreen;
+}
+
+.card-date {
+    font-size : 0.7rem;
+    margin : 0;
+}
+
+@media screen and (max-width : 1116px) {
+    .cards {
+        flex-wrap : wrap;
+    }
+
+    .card-layout {
+        width : 46%;
+        height : 46%;
+    }
+
+    .card-under {
+        padding : 0;
+        padding-left : 2%;
+        padding-right : 2%;
+    }
+
+    .card-content p {
+    display : -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp : 1;
+    -webkit-box-orient: vertical;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
+
+    .card-tags {
+        height : 12%;
+    }
+}
+
+
+
+.recent-posts {
+    width : 100%;
+    margin : 0;
+    height : calc(100vh * (7/10) + 1rem);
+    display : flex;
+}
+
+.posts {
+    list-style: none;
+    width : 100%;
+    padding : 0;
+}
+
+.post {
+    border-top : 1px solid #f0edea;
+    padding-top : 1rem;
+}
+
+.post:first-child {
+    border-top : 0;
+}
+
+.post-time {
+    margin : 0;
+    font-size : 0.8rem;
+}
+
+.post-title {
+    margin-top : 0.6rem;
+    margin-bottom : 1rem;
+}
+
+.post p {
+    display : -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp : 2;
+    -webkit-box-orient: vertical;
+    overflow : hidden;
+    text-overflow : ellipsis;
+}
