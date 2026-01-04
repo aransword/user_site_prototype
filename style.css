@@ -33,6 +33,7 @@ img {
 
 .header-left {
     flex : 4;
+    padding-left : 5%;
 }
 
 .header-right {
